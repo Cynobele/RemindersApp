@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.ac.abertay.cmp309project">
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/main_activity_label"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".AlarmReceiver$AlarmDismissService"/>
+        <service android:name=".NotificationReceiver$NotificationDismissService"/>
+        <activity
+            android:name=".FullscreenActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:launchMode="singleTop"
+            android:turnScreenOn="true"
+            android:showWhenLocked="true"
+            android:showOnLockScreen="true">
+        </activity>
+        <activity
+            android:name=".EditReminderActivity"
+            android:label="@string/edit_activity_label"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".AddReminderActivity"
+            android:label="@string/add_activity_label"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="uk.ac.abertay.cmp309project.NotificationReceiver">
+            <intent-filter>
+                <action android:name="uk.ac.abertay.cmp309project"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="uk.ac.abertay.cmp309project.AlarmReceiver">
+            <intent-filter>
+                <action android:name="uk.ac.abertay.cmp309project"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

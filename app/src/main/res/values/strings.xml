@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">CMP309Project</string>
+    <string name="main_activity_label">Reminders</string>
+    <string name="add_activity_label">New reminder</string>
+    <string name="edit_activity_label">Edit reminder</string>
+
+
+    <!-- NoResultsFragment strings-->
+    <string name="no_results_text">It\'s empty in here…\n Try adding a reminder</string>
+    <string name="add_button">Add</string>
+    <string name="refresh">Refresh</string>
+
+    <!-- add activity strings -->
+    <string name="reminder_info">Reminders will trigger a one-time notification at the time selected.\nIf an alarm is set, this will trigger instead.</string>
+    <string name="alarm_text">Set an alarm?</string>
+    <string name="add_picker">Select a time</string>
+    <string name="add_title_input">Reminder title </string>
+    <string name="add_text_input">Reminder notes </string>
+    <string name="add_submit">Create reminder</string>
+
+    <!-- edit activity strings -->
+    <string name="edit_title_input">New title:</string>
+    <string name="edit_hint">Leave blank for no changes</string>
+    <string name="edit_text_input">New notes:</string>
+    <string name="edit_picker">Pick a new time</string>
+    <string name="edit_submit">Apply changes</string>
+
+    <!-- day values for alarm frequency-->
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+    <string name="once">Once</string>
+    <string name="daily">Every day</string>
+    <string name="frequency_help">How often should the alarm go off?</string>
+
+    <!-- lorem ipsum -->
+    <string name="short_lorem">Lorem Ipsum</string>
+    <string name="long_lorem">Lorem ipsum dolor sit amet. Aut repellat facere At pariatur incidunt in aspernatur quis aut itaque perferendis ut quae rerum qui delectus repellendus!</string>
+</resources>
